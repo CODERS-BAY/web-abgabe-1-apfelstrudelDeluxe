@@ -35,5 +35,30 @@ li a:hover {
 
 
 h1 {
-    color: #7F0799;
+    color:white;
 }
+
+.header {
+    height: 70vh;
+    color: white;
+    background: url(images/banner.png) no-repeat fixed;
+    background-size: cover;
+    padding: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+.background-overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(105, 104, 105, 0, 8);
+    display: flex;
+    justify-content: center; /* Einfache Lösung, damit man alles in einer Section stylen kann. */
+    align-items: center;
+  }
+  
+  
