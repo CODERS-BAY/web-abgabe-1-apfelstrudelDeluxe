@@ -58,7 +58,7 @@ h1 {
     color:white;
 }
 
-header {
+.headerbanner {
     height: 70vh;
     color: white;
     background: url(images/banner.png) no-repeat fixed;
@@ -102,7 +102,7 @@ header {
    img {
        max-width: 100%;
    }
-   /* Das Bild  */
+   /* Das Bild soll immer 100% der Spaltenbreite haben, auch wenn die Spalte nur 50% hat. */
 
    .imageInText {
        border-radius: 50%;
