@@ -1,11 +1,26 @@
+/* body
+=============================== */
+body {
+    margin:0;
+    font-size: 120%;
+    font-family: "Helvetica New", Arial, sans-s;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: normal;
+    text-align: center:
+}
+
 /* navigation
 ================================*/
 
-ul {
+nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    display: flex;
+    /* overflow: hidden; */
     background-color: #7F0799;
 }
 
@@ -13,20 +28,25 @@ li {
     float: right;
 }
 
-li a {
-    display: inline-block;
+nav a {
     color: white; 
-    text-align: center;
-    padding: 14px 20px;
     text-decoration: none;
-}
+    display: block;
+    padding: 15px;
+    }
+
+/* nav a = jeder a-Tag immerhalb der Navigation. */
 
 li a:hover {
     background-color: #9649CB;
 }
 
-.navigation .logoPosition {
+nav .logoPosition {
     float: left;
+}
+
+nav .menue {
+    color: yellowgreen;
 }
 
 
@@ -38,7 +58,7 @@ h1 {
     color:white;
 }
 
-.header {
+header {
     height: 70vh;
     color: white;
     background: url(images/banner.png) no-repeat fixed;
@@ -61,4 +81,42 @@ h1 {
     align-items: center;
   }
   
+
+  .test {
+      border-top: 20px dotted yellow;
+  }
   
+
+  /* main
+   =============================*/
+   main {
+       display: flex;
+       max-width: 100%;
+   }
+
+   article {
+       width: 50%;
+       padding: 2%;
+   }
+
+   img {
+       max-width: 100%;
+   }
+   /* Das Bild  */
+
+   .imageInText {
+       border-radius: 50%;
+   }
+
+/* festlegen von Breakpoints
+===================================== */
+
+   @media screen and (max-width: 720px) {
+    main {
+        display: block;
+    }   
+    
+    article {
+       display: block;
+       width: 100%
+   }
