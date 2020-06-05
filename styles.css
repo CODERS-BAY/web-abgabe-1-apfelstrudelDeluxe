@@ -1,8 +1,39 @@
-body {
-    background-color: bisque;
+/* navigation
+================================*/
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #7F0799;
 }
 
+li {
+    float: right;
+}
+
+li a {
+    display: inline-block;
+    color: white; 
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #9649CB;
+}
+
+.navigation .logoPosition {
+    float: left;
+}
+
+
+/* header
+================================*/
+
+
 h1 {
-    background-color: hotpink;
-    color: lawngreen;
+    color: #7F0799;
 }
