@@ -74,11 +74,12 @@ nav a {
     height: 50px;
     }
 
+
 /* alle Links, ausser der Logo Link mit der Klasse .active sollen einen HG haben bei Hover. */
 li a:hover:not(.active) {
     transition: 0.8s;
     background-color:lightslategray;
-}
+    }
 
 .active {
     background-color: black;
@@ -125,6 +126,7 @@ nav .contact a {
     text-align: center;
   }
   
+
   .headerbannerPage {
     background-color: lightskyblue;
     color: white;
@@ -138,7 +140,7 @@ nav .contact a {
 }
 
 
-/* main
+
 =============================*/
 main {
     max-width: 100%;
@@ -286,7 +288,7 @@ main {
 }
 
 
-
+/* 
 
 .photosAlternative {
     padding: 0px 5%;
@@ -310,9 +312,64 @@ main {
 
 }
 
+ */
 
 
 
+/* Seite "Programm 2019"
+=====================================
+===================================== */
+.programm2019 {
+    padding: 0px 5%;
+}
+
+.programm2019 ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.programm2019 li {
+    background-color: lightskyblue;
+    box-shadow: 10px 10px black;
+    padding: 2%;
+    max-width: 100%;
+    line-height: 5px;
+}
+
+.programm2019 ul li {
+    list-style: none;
+    width: calc(100%/4);
+    position: relative;
+    z-index: -1;
+    text-align: center;
+}
+
+.time {
+    font-weight: bolder;
+}
+
+.heritage {
+    text-decoration: none;
+    color: white;
+    font-variant-caps: all-small-caps;
+    font-size: 20px;
+}
+
+.kind a:link {
+    color: teal;
+}
+
+.kind a:visited {
+    color: purple;
+}
+
+.kind a:hover {
+    color: limegreen;
+}
+
+.kind a:active {
+    color:limegreen;
+}
 
 
 
@@ -342,6 +399,11 @@ main {
     flex-direction: column;
 }
 
+.column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+
 }
 
 
@@ -351,6 +413,4 @@ main {
 
 
 /* Fragen:
-.headerbannerPage responsive
-
-*/
+.headerbannerPage responsive */
