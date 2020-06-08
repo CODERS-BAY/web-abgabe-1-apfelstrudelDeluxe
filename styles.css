@@ -8,107 +8,316 @@ body {
 
 h1 {
     font-size: 3rem;
-    font-weight: normal;
-    text-align: center:
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+button {
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    background-color: black;
+    }
+
+button:hover {
+transition: 0.5s;
+background-color: lightskyblue;
+color: black;
+border: 1px solid white;
+}
+
+button a {
+    text-decoration: none;
+    color: white;
+    font-variant-caps: all-small-caps;
+    font-size: 20px;
 }
 
 /* navigation
 ================================*/
 
+/* generelle Einstellungen zu Höhe und Weite, Fixierung. */
+nav {
+    top:0;
+    position: fixed;
+    width: 100%;
+}
+
+/* Styling der Liste an sich. Breite, Hintergrund, Listenelemente,... */
 nav ul {
+    overflow: hidden;
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    /* overflow: hidden; */
-    background-color: #7F0799;
+    background-color: black;
 }
 
-li {
-    float: right;
+/* Styling aller Listenelemente. Ausrichtung */
+nav li {
+    float:right;
 }
 
+/* nav a = jeder a-Tag immerhalb der Navigation. Jeder einzelne Eintrag. */
 nav a {
     color: white; 
     text-decoration: none;
     display: block;
     padding: 15px;
+    line-height: 50px;
+    height: 50px;
     }
 
-/* nav a = jeder a-Tag immerhalb der Navigation. */
-
-li a:hover {
-    background-color: #9649CB;
+/* alle Links, ausser der Logo Link mit der Klasse .active sollen einen HG haben bei Hover. */
+li a:hover:not(.active) {
+    transition: 0.8s;
+    background-color:lightslategray;
 }
 
+.active {
+    background-color: black;
+}
+
+/* Styling des Logos */
 nav .logoPosition {
-    float: left;
+    display: block;
+	padding: 15px;
+	float: left;
+	height: 50px;
 }
 
-nav .menue {
-    color: yellowgreen;
+nav .logoPosition a {
+    text-decoration: none;
+    display: block;
+    padding: 0px;
+    line-height: 50px;
+    height: 50px;
+    }
+
+
+nav .contact a {
+    color: lightskyblue;
 }
 
 
-/* header
+/* header (homepage and other pages)
 ================================*/
 
 
-h1 {
-    color:white;
-}
-
-.headerbanner {
-    height: 70vh;
+ .headerbanner { 
+    top: 50px;
+    min-height: 100vh;
     color: white;
     background: url(images/banner.png) no-repeat fixed;
     background-size: cover;
     padding: 0;
+    z-index: -1;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
   }
-
-.background-overlay {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    background-color: rgba(105, 104, 105, 0, 8);
+  
+  .headerbannerPage {
+    background-color: lightskyblue;
+    color: white;
+    min-height: 20vh;
+    padding-top: 4%;
+    z-index: -1;
     display: flex;
-    justify-content: center; /* Einfache Lösung, damit man alles in einer Section stylen kann. */
+    justify-content: center;
     align-items: center;
-  }
-  
+    text-align: center;
+}
 
-  .test {
-      border-top: 20px dotted yellow;
-  }
-  
 
-  /* main
+/* main
+=============================*/
+main {
+    max-width: 100%;
+}
+
+
+/* simple footer
    =============================*/
-   main {
-       display: flex;
-       max-width: 100%;
-   }
 
-   article {
-       width: 50%;
-       padding: 2%;
-   }
+   footer {
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 5px;
+    font-size: 80%
+}
 
-   img {
+/* Seite "Homepage"
+=====================================
+===================================== */
+
+/* section overview
+============================= */
+
+.overview {
+    display:flex;
+}
+
+.articleOverview {
+    width: 50%;
+    padding: 4%;
+    background-color:white;
+    text-align: center;
+}
+
+.imageInOverview {
+    max-width: 50%;
+    box-shadow: 10px 10px lightskyblue;
+      }
+
+    img {
        max-width: 100%;
    }
    /* Das Bild soll immer 100% der Spaltenbreite haben, auch wenn die Spalte nur 50% hat. */
 
-   .imageInText {
-       border-radius: 50%;
-   }
+   
+/* section comment
+============================= */
+
+.comment {
+    display: flex;
+    background-color: lightskyblue;
+    padding: 2%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.articleComment {
+    font-family: 'Rock Salt', cursive;
+    font-size: 25px;
+    color: black;
+    padding: 1%;
+    margin: 1%;
+    width: 80%;
+}
+
+.articleName {
+    color: black;
+    padding: 1%;
+    margin: 1%;
+    width: 20%;
+}
+
+
+/* Seite "Hghlights"
+=====================================
+===================================== */
+
+.photos {
+    padding: 0px 5%;
+}
+
+.photos h2 {
+    padding: 2%;
+}
+
+.photos ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.photos li {
+    list-style: none;
+    height: 300px;
+    width: calc(100%/3);
+    position: relative;
+    cursor: pointer;
+}
+
+.photos p {
+    display:none;
+    height: 100%;
+    width: 100%;
+    color: white;
+    margin: 0px;
+}
+
+.photos li:hover p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: rgba(135, 206, 250, 0.7);
+}
+
+.photos li.pflaster1 {
+    background: url(images/highlights/pflaster1.png) no-repeat center;
+    background-size: cover;
+}
+
+.photos li.pflaster2 {
+    background: url(images/highlights/pflaster2.png) no-repeat center;
+    background-size: cover;
+}
+
+.photos li.pflaster3 {
+    background: url(images/highlights/pflaster3.png) no-repeat center;
+    background-size: cover;
+}
+
+.photos li.pflaster4 {
+    background: url(images/highlights/pflaster4.png) no-repeat center;
+    background-size: cover;
+}
+
+.photos li.pflaster5 {
+    background: url(images/highlights/pflaster5.png) no-repeat center;
+    background-size: cover;
+}
+
+.photos li.pflaster6 {
+    background: url(images/highlights/pflaster6.png) no-repeat center;
+    background-size: cover;
+}
+
+
+
+
+.photosAlternative {
+    padding: 0px 5%;
+}
+
+.photosAlternative h2 {
+    padding: 2%;
+}
+
+.photosAlternative ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.photosAlternative ul li {
+    list-style: none;
+    height: 300px;
+    width: calc(100%/3);
+    position: relative;
+    z-index: -1;
+
+}
+
+
+
+
+
+
 
 /* festlegen von Breakpoints
+=====================================
 ===================================== */
 
    @media screen and (max-width: 720px) {
@@ -118,5 +327,30 @@ h1 {
     
     article {
        display: block;
-       width: 100%
+       width: 100%;
    }
+
+   .overview {
+       flex-direction: column;
+   }
+
+   .comment {
+    flex-direction: column;
+}
+
+.photos {
+    flex-direction: column;
+}
+
+}
+
+
+
+
+
+
+
+/* Fragen:
+.headerbannerPage responsive
+
+*/
