@@ -73,7 +73,9 @@ nav a {
     line-height: 50px;
     height: 50px;
     }
-
+nav a.current {
+    font-weight: bold;
+}
 
 /* alle Links, ausser der Logo Link mit der Klasse .active sollen einen HG haben bei Hover. */
 li a:hover:not(.active) {
@@ -141,7 +143,7 @@ nav .contact a {
 
 
 
-=============================*/
+/*=============================*/
 main {
     max-width: 100%;
 }
@@ -383,9 +385,11 @@ main {
     }   
     
     article {
-       display: block;
-       width: 100%;
+       width: auto;
    }
+
+/*     display: block;
+       width: 100%; */
 
    .overview {
        flex-direction: column;

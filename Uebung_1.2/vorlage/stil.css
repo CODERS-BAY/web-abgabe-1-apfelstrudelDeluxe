@@ -27,6 +27,8 @@ nav a {
   display: block;
   padding: 0.8rem;
 }
+
+/* The current page gets a specific class that shows that the page is active/seen. */
 nav a.aktuell {
   font-weight: bold;
 }
@@ -36,7 +38,7 @@ main {
   display: flex;
 }
 article {
-  width: 50%;
+  width: 25%;
   margin: 0 2rem;
 }
 footer {
