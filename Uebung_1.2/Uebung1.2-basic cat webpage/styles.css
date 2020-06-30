@@ -1,0 +1,92 @@
+body {
+    font-size: 120%;
+    font-family: 'MuseoModerno', cursive; /* call implemented Google fonts from html-file */
+    line-height: 1.5;
+    color: #1D3557;
+    background-color: #F1FAEE; 
+    margin: 0;              /* removal of standard margin */
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 2rem;
+    margin: 0;              /* removal of standard margin */
+}
+
+nav {
+    background-color: #A8DADC;
+}
+
+nav ul {
+    margin: 0;              /* removal of standard margin */
+    padding-left: 1rem;
+    display: flex;          /* displays every element next to each other, not below */
+    list-style: none;       /* removal of list points, no styling */
+}
+
+nav a {                     /* styling of the links in the navigation */
+   color: #F1FAEE;
+   text-decoration: none; 
+   display: block;          /* important fpr displaying the links */
+   padding: 1rem;
+}
+
+nav a.aktuell {
+    font-weight: bolder;
+}
+
+article {                   /* how to display the text with the images in a block with 2 lines */
+    max-width: 62rem;       /* defined max. width */
+    margin: auto;           /* centers the elements in "main"*/
+    display: flex;          /* displays all "article"-elements next to each other */
+}
+
+section {
+    width: 50%;             /* 2 columns */
+    margin: 0 2rem;
+}
+
+
+.linkInText:link {                  /* unvisited link */
+    color: #1D3557;
+  }
+  
+  
+.linkInText:visited {               /* visited link */
+    color: #457B9D;
+  }
+  
+  
+.linkInText:hover {                 /* mouse over link */
+    color: #E63946;
+  }
+  
+  
+.linkInText:active {                /* selected link */
+    color: #1D3557;
+  }
+
+
+footer {
+    background-color: #1D3557;
+    color: #F1FAEE;
+    padding: 1rem;
+    text-align: right;
+}
+
+img {
+    max-width: 100%;        /* the image is only as wide as its parent-element */
+    height: auto;
+}
+
+@media screen and (max-width: 530px) {  /* these settings are relevant for all screens wigh a maximum width od 530px */
+    article {
+        display: block;     /* article-elements are displayed below each other, in a block */
+    }
+
+    section {
+        width: auto;        /* when displayed as block then the width is "normal", no longer 50% */
+    }
+}

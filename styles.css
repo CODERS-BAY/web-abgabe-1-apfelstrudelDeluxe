@@ -322,12 +322,11 @@ main {
 =====================================
 ===================================== */
 .programm2019 {
-    padding: 0px 5%;
+    display: flex;
 }
 
-.programm2019 ul {
-    display: flex;
-    flex-wrap: wrap;
+.programm2019 article {
+    width: 50%;
 }
 
 .programm2019 li {
@@ -340,7 +339,6 @@ main {
 
 .programm2019 ul li {
     list-style: none;
-    width: calc(100%/4);
     position: relative;
     z-index: -1;
     text-align: center;
